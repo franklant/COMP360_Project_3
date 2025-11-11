@@ -1,5 +1,10 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+// Franklan Taylor
+// COMP360-001
+// 11/11/2025
+// A Seat Reservation program where the user can select a date, time, seat and either reserve that seat
+// or return an exception saying the seat is full.
+
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("YEAHHHHHHHHH");
