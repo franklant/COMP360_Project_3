@@ -1,7 +1,7 @@
 // Name: Franklan Taylor
-// Date:
+// Date: 11/18/2025
 // Course: COMP360-001
-// Description:
+// Description: Thrown to indicate that the theater no longer has seats available to the customer.
 
 /**
  * <p>Thrown to indicate that the theater no longer has seats available to the customer.</p>

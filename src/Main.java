@@ -10,7 +10,10 @@ public class Main
     public static void main(String[] args)
     {
         Main app = new Main();
-        app.throwException();
+        // app.throwException();
+
+        Movie newMovie = new Movie();
+        newMovie.getDateTime();
     }
 
     /**
