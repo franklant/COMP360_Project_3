@@ -7,7 +7,8 @@
  * <p>Thrown to indicate that the theater no longer has seats available to the customer.</p>
  * @since 0.0
  */
-public class WestTheaterFullException extends IllegalArgumentException{
+public class WestTheaterFullException extends IllegalArgumentException
+{
     /**
      * <p>Constructs an {@code WestTheaterFullException} with a detailed message</p>
      */

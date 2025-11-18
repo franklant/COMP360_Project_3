@@ -5,7 +5,8 @@
 // or return an exception saying the seat is full.
 
 
-public class Main {
+public class Main
+{
     public static void main(String[] args)
     {
         Main app = new Main();
@@ -15,7 +16,7 @@ public class Main {
     /**
      * <p>Throws the  {@link WestTheaterFullException} as a test.</p>
      */
-    public void throwException()
+    public void throwException() throws WestTheaterFullException
     {
         throw new WestTheaterFullException();
     }
