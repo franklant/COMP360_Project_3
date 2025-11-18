@@ -3,9 +3,6 @@
 // Course: COMP360-001
 // Description:
 
-
-
-
 /**
  * <p>Thrown to indicate that the theater no longer has seats available to the customer.</p>
  * @since 0.0
