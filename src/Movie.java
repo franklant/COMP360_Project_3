@@ -2,7 +2,7 @@
 // Date: 11/18/2025
 // Course: COMP360-001
 // Description: Movie is an object that represents a movie to be selected and reserved in the Seat Reservation System.
-// This object stores the movie name, date, time, and numOfSeats. This information will be used to display information
+// This object stores the movie name, date, time, and numOfSeats. This will be used to display information
 // for the theater section including the seats available and the max number of seats available to be reserved.
 
 import java.time.LocalDate;
@@ -10,7 +10,7 @@ import java.time.LocalTime;
 
 /**
  * <p>{@code Movie} is an object that represents a movie to be selected and reserved in the Seat Reservation System.
- * This object stores the movie {@code name}, {@code date}, {@code time}, and {@code numOfSeats}. This information
+ * This object stores the movie {@code name}, {@code date}, {@code time}, and {@code numOfSeats}. This
  * will be used to display information for the theater section including the seats available and the max number of seats
  * available to be reserved.</p>
  */
@@ -54,5 +54,16 @@ public class Movie {
     void getDateTime()
     {
         System.out.println(_date + " " + _time);
+    }
+
+    /**
+     * <p>Print the attributes of this {@code Movie} instance onto the screen within a special format.</p>
+     */
+    void printInfo()
+    {
+        System.out.println("Movie Name: " + _name);
+        System.out.println("Movie Date: " + _date.toString());
+        System.out.println("Movie Time: " + _time.toString());
+        System.out.println("Total Number of Seats: " + _numOfSeats);
     }
 }
