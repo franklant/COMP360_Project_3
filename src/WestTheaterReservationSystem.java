@@ -4,6 +4,10 @@
 // Description: WestTheaterReservationSystem is responsible for the overall functionality of the movie reservation
 // system. Here we can reserve a seat and check whether the seats are filled.
 
+import javax.swing.*;
+import java.awt.*;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Dictionary;
 import java.util.Enumeration;
 import java.util.Hashtable;
@@ -27,20 +31,12 @@ public class WestTheaterReservationSystem {
     }
 
     /**
-     * <p>Reserves a seat for the currently selected movie.</p>
-     */
-    public void reserveSeat()
-    {
-
-    }
-
-    /**
      * <p>Checks if the movie theater is full. If it is, the method will throw an exception.</p>
      * @throws WestTheaterFullException
      */
     public void westTheaterFull() throws WestTheaterFullException
     {
-
+        throw new WestTheaterFullException();
     }
 
     /**
@@ -63,6 +59,40 @@ public class WestTheaterReservationSystem {
 
         Movie newMovie = new Movie(name, month, day, hour, min, numOfSeats);
         _movieManager.put(name, newMovie);
+    }
+
+    /**
+     * <p>Used to grab the current movie list of the {@code WestTheaterReservationSystem}.</p>
+     * @return A {@link Dictionary} with the currently added movies.
+     */
+    public Dictionary<String, Movie> getMovieManager()
+    {
+        return _movieManager;
+    }
+
+    /**
+     * <p>Checks the {@code _movieManager} dictionary for a movie with an identical title, date, and time as the
+     * one trying to be created.</p>
+     * @return {@code true} if the movie has NOT been created already; {@code false} if it HAS been created.
+     */
+    public boolean verifyMovieList(String name, int month, int day, int hour, int min)
+    {
+        Enumeration<Movie> movies = _movieManager.elements();
+        while (movies.hasMoreElements())
+        {
+            Movie currentMovie = movies.nextElement();
+
+            // movie already exists
+            if (
+                    currentMovie._name.equals(name)
+                    && currentMovie._date.isEqual(LocalDate.of(2025, month, day))
+                    && currentMovie._time.equals(LocalTime.of(hour, min))
+            )
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     /**
